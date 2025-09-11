@@ -159,13 +159,8 @@ to see the exact options available in your copy.
 
 Prefer a hosted demo? Try the app on **Hugging Face Spaces** (ZeroGPU spins up on demand):
 
-- ▶️ **Launch the Space:** `https://huggingface.co/spaces/TODO-REPLACE-WITH-YOUR-SPACE`
+- ▶️ **Launch the Space:** `https://huggingface.co/spaces/zakinho00/RegRAGapp`
 
-Add this badge near the top once your Space is live:
-
-~~~markdown
-[![HF Space](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Space-black)](https://huggingface.co/spaces/TODO-REPLACE-WITH-YOUR-SPACE)
-~~~
 
 ---
 
@@ -192,4 +187,5 @@ Add this badge near the top once your Space is live:
 ## License
 
 Released under the **MIT License**. See [LICENSE](LICENSE) for details.
+
 
