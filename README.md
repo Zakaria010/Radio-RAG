@@ -179,14 +179,6 @@ Add this badge near the top once your Space is live:
 
 
 
-Recommended layout:
-
-~~~text
-assets/
-├─ fig2_rag_pipeline.png      
-├─ fig5_vanilla_vs_rag.png
-~~~
-
 ---
 
 ## Troubleshooting
@@ -200,3 +192,4 @@ assets/
 ## License
 
 Released under the **MIT License**. See [LICENSE](LICENSE) for details.
+
