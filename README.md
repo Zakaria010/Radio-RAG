@@ -4,6 +4,12 @@ Retrieval-Augmented Generation (RAG) for **radio regulations** (e.g., ITU rules 
 Index regulation PDFs with FAISS, retrieve the most relevant passages, and generate grounded answers with an LLM.
 
 <p align="center">
+  <a href="https://arxiv.org/abs/ARXIV_ID_GOES_HERE" target="_blank">
+    <img alt="arXiv Paper" src="https://img.shields.io/badge/arXiv-Paper-b31b1b.svg">
+  </a>
+</p>
+
+<p align="center">
   <!-- Prefer PNG for inline rendering; keep a PDF link as fallback -->
   <img alt="RAG pipeline overview (Fig. 2)" src="assets/fig2_rag_pipeline.png" width="720">
 </p>
@@ -25,6 +31,7 @@ Index regulation PDFs with FAISS, retrieve the most relevant passages, and gener
 - [Hugging Face (ZeroGPU)](#hugging-face-zerogpu)
 - [Figures](#figures)
 - [Troubleshooting](#troubleshooting)
+- [Citation](#citation)
 - [License](#license)
 
 ---
@@ -159,20 +166,21 @@ to see the exact options available in your copy.
 
 Prefer a hosted demo? Try the app on **Hugging Face Spaces** (ZeroGPU spins up on demand):
 
-- ▶️ **Launch the Space:** `https://huggingface.co/spaces/zakinho00/RegRAGapp`
-
+<p align="center">
+  <a href="https://huggingface.co/spaces/zakinho00/RegRAGapp" target="_blank">
+    <img alt="Open the HF Space" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Open%20App-blue.svg" width="220">
+  </a>
+</p>
 
 ---
 
-
+## Figures
 
 **Figure 5 — Vanilla vs. RAG (Qualitative)**
 
 <p align="center">
   <img alt="GPT-4o vs RAG with context (Fig. 5)" src="assets/fig5_vanilla_vs_rag.png" width="720">
 </p>
-
-
 
 ---
 
@@ -184,8 +192,22 @@ Prefer a hosted demo? Try the app on **Hugging Face Spaces** (ZeroGPU spins up o
 
 ---
 
-## License
+## Citation
 
-Released under the **MIT License**. See [LICENSE](LICENSE) for details.
+If you use this repository, **please cite the paper**:
+
+- **Paper:** [arXiv](https://arxiv.org/abs/ARXIV_ID_GOES_HERE)
+
+```bibtex
+@misc{radio_rag_arxiv_2025,
+  title         = {Radio-RAG: Retrieval-Augmented Generation for Radio Regulations},
+  author        = {Your Name and Coauthors},
+  year          = {2025},
+  eprint        = {ARXIV_ID_GOES_HERE},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.IR}
+}
+
+
 
 
