@@ -4,7 +4,7 @@ Retrieval-Augmented Generation (RAG) for **radio regulations** (e.g., ITU rules 
 Index regulation PDFs with FAISS, retrieve the most relevant passages, and generate grounded answers with an LLM.
 
 <p align="center">
-  <a href="https://arxiv.org/abs/ARXIV_ID_GOES_HERE" target="_blank">
+  <a href="https://arxiv.org/abs/2509.09651" target="_blank">
     <img alt="arXiv Paper" src="https://img.shields.io/badge/arXiv-Paper-b31b1b.svg">
   </a>
 </p>
@@ -207,6 +207,7 @@ If you use this repository, **please cite the paper**:
   archivePrefix = {arXiv},
   primaryClass  = {cs.IR}
 }
+
 
 
 
