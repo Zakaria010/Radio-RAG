@@ -77,7 +77,10 @@ Create the `data/` folder (if it doesn’t exist) and put your regulation PDFs i
 
 ~~~text
 data/
-├─ itu_radio_regulations.pdf
+├─ 2400594-RR-Vol 1-E-A5.pdf
+├─ 2400594-RR-Vol 2-E-A5.pdf
+├─ 2400594-RR-Vol 3-E-A5.pdf
+├─ 2400594-RR-Vol 4-E-A5.pdf
 └─ your_other_regulation_book.pdf
 ~~~
 
@@ -105,25 +108,17 @@ Radio-RAG/
 python local_rag.py --help
 ~~~
 
-### Examples
+### Example
 
-**A) Ask a question (builds or reuses the index)**
-
-~~~bash
-python local_rag.py \
-  --pdf_folder ./data \
-  --question "What is the maximum power flux-density at the GSO produced by any EESS space station?"
-~~~
-
-**B) Retrieve context only (no generation) — if supported**
+**A) Ask a question **
 
 ~~~bash
 python local_rag.py \
   --pdf_folder ./data \
-  --top_k 5 \
-  --question "Define the protection criteria for GSO links." \
-  --no_generate
 ~~~
+Then the app will run and you can ask your question
+
+
 
 ### Common Arguments
 
@@ -131,13 +126,8 @@ python local_rag.py \
 - `--chunk_size` *(int)* — chunk length used for text splitting  
 - `--overlap` *(int)* — overlap between adjacent chunks  
 - `--index_type` *(str)* — FAISS index (`flatl2`, `hnsw`, `ivfflat`, `ivfpq`, …)  
-- `--embed_model` *(str)* — embedding model ID/name  
-- `--llm_model` *(str)* — LLM ID/name  
+- `--model_name` *(str)* — LLM ID/name  
 - `--top_k` *(int)* — number of retrieved chunks  
-- `--question` *(str)* — your query  
-- `--no_generate` *(flag)* — return retrieved context without generation
-
-> If you change embedding/index parameters or models, **rebuild** the index to avoid stale vectors.
 
 ---
 
@@ -146,19 +136,10 @@ python local_rag.py \
 Evaluation utilities live in `tests/`. A typical pattern:
 
 ~~~bash
-python tests/evaluate_rag.py \
-  --pdf_folder ./data \
-  --top_k 5
+python -m tests.evaluation  --chunk_size 400 --overlap 50 --index_type innerproduct --top_k 5 --model_name "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B" --test "splits/eval.json"
 ~~~
 
-Some versions include a switch like `--norag` to compare **vanilla LLM** vs **RAG**.  
-Run:
-
-~~~bash
-python tests/evaluate_rag.py --help
-~~~
-
-to see the exact options available in your copy.
+This evaluation.py script include a switch like `--norag` to compare **vanilla LLM** vs **RAG**.  
 
 ---
 
@@ -207,6 +188,7 @@ If you use this repository, **please cite the paper**:
   archivePrefix = {arXiv},
   primaryClass  = {cs.IR}
 }
+
 
 
 
