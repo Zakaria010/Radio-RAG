@@ -21,6 +21,7 @@ Index regulation PDFs with FAISS, retrieve the most relevant passages, and gener
 ## Table of Contents
 
 - [Overview](#overview)
+- [Radio-RAG Custom GPT](#radio-rag-custom-gpt)
 - [Features](#features)
 - [Quick Start](#quick-start)
 - [Project Structure](#project-structure)
@@ -44,6 +45,21 @@ Index regulation PDFs with FAISS, retrieve the most relevant passages, and gener
 2. **Embed** those chunks and build a **FAISS** index.  
 3. **Retrieve** the most relevant passages for a user question.  
 4. **Generate** grounded answers with an LLM using the retrieved context.
+
+---
+
+## Radio-RAG Custom GPT
+
+Prefer a chat interface instead of running the code locally?
+
+Use the **Radio-RAG Custom GPT**, a specialized assistant built on top of this RAG pipeline:
+
+- ✅ Backed by the same **PDF → chunks → FAISS** retrieval used in this repo  
+- 📚 Tailored for **ITU Radio Regulations & spectrum management** use-cases  
+- 📎 Answers are **grounded in the indexed documents**, with references to the relevant provisions  
+- 🧪 Great for quick checks, exploration, and validating how RAG behaves before full deployment  
+
+👉 [Open the Radio-RAG Custom GPT](https://chatgpt.com/g/g-687bac267f508191a97daf466eccfa50-radio-regulations-gpt)
 
 ---
 
@@ -177,17 +193,19 @@ Prefer a hosted demo? Try the app on **Hugging Face Spaces** (ZeroGPU spins up o
 
 If you use this repository, **please cite the paper**:
 
-- **Paper:** [arXiv](https://arxiv.org/abs/ARXIV_ID_GOES_HERE)
+- **Paper:** [arXiv](https://arxiv.org/abs/2509.09651)
 
 ```bibtex
-@misc{radio_rag_arxiv_2025,
-  title         = {Radio-RAG: Retrieval-Augmented Generation for Radio Regulations},
-  author        = {Your Name and Coauthors},
-  year          = {2025},
-  eprint        = {ARXIV_ID_GOES_HERE},
-  archivePrefix = {arXiv},
-  primaryClass  = {cs.IR}
+@misc{kassimi2025retrieval,
+      title={Retrieval-Augmented Generation for Reliable Interpretation of Radio Regulations}, 
+      author={Zakaria El Kassimi and Fares Fourati and Mohamed-Slim Alouini},
+      year={2025},
+      eprint={2509.09651},
+      archivePrefix={arXiv},
+      primaryClass={cs.IR},
+      url={https://arxiv.org/abs/2509.09651}, 
 }
+
 
 
 
